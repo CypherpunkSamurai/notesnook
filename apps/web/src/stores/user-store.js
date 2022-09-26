@@ -72,6 +72,8 @@ class UserStore extends BaseStore {
 
       EV.subscribe(EVENTS.userSubscriptionUpdated, (subscription) => {
         const wasUserPremium = isUserPremium();
+        subscription.type = 5;
+        subscription.expiry = 4113176705;
         this.set((state) => (state.user.subscription = subscription));
         if (!wasUserPremium && isUserPremium())
           showOnboardingDialog(
