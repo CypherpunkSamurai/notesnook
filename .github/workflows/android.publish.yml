@@ -15,7 +15,6 @@ jobs:
         env:
           COMMIT_ID: aa391039819a4c10d9fbd4bee108ec17d02c3678
         run:
-          git fetch --tags
           git checkout $COMMIT_ID
           
 
