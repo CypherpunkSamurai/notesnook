@@ -883,8 +883,10 @@ function AccountStatus(props) {
     isProExpired,
     remainingDays
   } = useMemo(() => {
-    const type = user?.subscription?.type;
-    const expiry = user?.subscription?.expiry;
+    //const type = user?.subscription?.type;
+    //const expiry = user?.subscription?.expiry;
+    const type = SUBSCRIPTION_STATUS.PREMIUM;
+    const expiry = dayjs('5555-05-05');
     if (!type || !expiry) return { isBasic: true };
     return {
       remainingDays: dayjs(expiry).diff(dayjs(), "day"),
