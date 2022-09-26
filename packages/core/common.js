@@ -23,10 +23,11 @@ export const EV = new EventManager();
 
 export async function checkIsUserPremium(type) {
   // if (process.env.NODE_ENV === "test") return true;
+  return true;
 
-  const results = await EV.publishWithResult(EVENTS.userCheckStatus, type);
-  if (typeof results === "boolean") return results;
-  return results.some((r) => r.type === type && r.result === true);
+  //const results = await EV.publishWithResult(EVENTS.userCheckStatus, type);
+  //if (typeof results === "boolean") return results;
+  //return results.some((r) => r.type === type && r.result === true);
 }
 
 export function sendAttachmentsProgressEvent(type, groupId, total, current) {
