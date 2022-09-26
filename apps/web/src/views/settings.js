@@ -66,17 +66,17 @@ import { debounce } from "../utils/debounce";
 import { clearLogs, downloadLogs } from "../utils/logger";
 
 function subscriptionStatusToString(user) {
-  const status = user?.subscription?.type;
+//   const status = user?.subscription?.type;
 
-  if (status === SUBSCRIPTION_STATUS.BETA) return "Beta";
-  else if (status === SUBSCRIPTION_STATUS.TRIAL) return "Trial";
-  else if (
-    status === SUBSCRIPTION_STATUS.PREMIUM ||
-    status === SUBSCRIPTION_STATUS.PREMIUM_CANCELED
-  )
+//   if (status === SUBSCRIPTION_STATUS.BETA) return "Beta";
+//   else if (status === SUBSCRIPTION_STATUS.TRIAL) return "Trial";
+//   else if (
+//     status === SUBSCRIPTION_STATUS.PREMIUM ||
+//     status === SUBSCRIPTION_STATUS.PREMIUM_CANCELED
+//   )
     return "Pro";
-  else if (status === SUBSCRIPTION_STATUS.PREMIUM_EXPIRED) return "Expired";
-  else return "Basic";
+//   else if (status === SUBSCRIPTION_STATUS.PREMIUM_EXPIRED) return "Expired";
+//   else return "Basic";
 }
 
 const otherItems = [
