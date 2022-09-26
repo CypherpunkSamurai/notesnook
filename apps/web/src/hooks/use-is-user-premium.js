@@ -29,14 +29,16 @@ export function useIsUserPremium() {
 }
 
 export function isUserPremium(user) {
-  if (process.env.REACT_APP_CI) return true;
-  if (!user) user = userstore.get().user;
+  // me
+  // if (process.env.REACT_APP_CI) 
+  return true;
+  //if (!user) user = userstore.get().user;
 
-  const subStatus = user?.subscription?.type;
-  return (
-    subStatus === SUBSCRIPTION_STATUS.BETA ||
-    subStatus === SUBSCRIPTION_STATUS.PREMIUM ||
-    subStatus === SUBSCRIPTION_STATUS.PREMIUM_CANCELED ||
-    subStatus === SUBSCRIPTION_STATUS.TRIAL
-  );
+  //const subStatus = user?.subscription?.type;
+  //return (
+  //  subStatus === SUBSCRIPTION_STATUS.BETA ||
+  //  subStatus === SUBSCRIPTION_STATUS.PREMIUM ||
+  //  subStatus === SUBSCRIPTION_STATUS.PREMIUM_CANCELED ||
+  //  subStatus === SUBSCRIPTION_STATUS.TRIAL
+  //);
 }
