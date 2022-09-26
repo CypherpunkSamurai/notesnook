@@ -1,6 +1,8 @@
 name: Publish @notesnook/mobile
 
-on: workflow_dispatch
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -43,6 +45,11 @@ jobs:
 
       - name: Build unsigned app bundle
         run: yarn release:android:bundle
+        
+      - uses: actions/upload-artifact@v3
+        with:
+          name: notesnook
+          path: apps/mobile/native/android/app/build/outputs/bundle/release
 
       - name: Sign app bundle for Playstore release
         id: sign_app
