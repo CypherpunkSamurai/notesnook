@@ -11,11 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: Revert to Working Commit
-        env:
-          COMMIT_ID: aa391039819a4c10d9fbd4bee108ec17d02c3678
-        run:
-          git checkout $COMMIT_ID
           
 
       - uses: actions/setup-node@master
